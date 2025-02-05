@@ -6,11 +6,24 @@ section {
 }
 
 div {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .logo-container {
+  display: flex;
   .logo {
     height: 56px;
+  }
+  span{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: calc(100% - 58px);
+    h1{
+      font-size: 24px;
+    }
+    h2{
+      font-size: 16px;
+    }
   }
 }

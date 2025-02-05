@@ -17,7 +17,7 @@
   margin: 0;
   box-sizing: border-box;
   border: none;
-  font-family: poppins400;
+  font-family: poppins700;
 }
 
 body {
@@ -30,8 +30,13 @@ input {
   border-radius: 100px;
   padding-inline: 16px;
   font-size: 16px;
+  font-family: poppins400;
   &:focus {
     border: 1px solid #00000050;
     outline-style: none;
   }
+}
+
+button{
+    cursor: pointer;
 }

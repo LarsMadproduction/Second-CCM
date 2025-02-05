@@ -1,0 +1,14 @@
+div{
+    position: absolute;
+    bottom: 56px;
+    right: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    button{
+        height: 48px;
+        width: 48px;
+        border-radius: 100%;
+        background-color: #bfefd9;
+    }
+}
