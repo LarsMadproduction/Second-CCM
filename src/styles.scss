@@ -1,7 +1,23 @@
+@font-face {
+    font-family: poppins200;
+    src: url(/font/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: poppins400;
+    src: url(/font/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppins700;
+    src: url(/font/Poppins-Bold.ttf);
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
   border: none;
+  font-family: poppins400;
 }
 
 body {
