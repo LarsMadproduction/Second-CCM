@@ -1,11 +1,27 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-pic-slide',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './pic-slide.component.html',
-  styleUrl: './pic-slide.component.scss'
+  styleUrl: './pic-slide.component.scss',
 })
 export class PicSlideComponent {
+  @ViewChild('sliderContainer') sliderContainer!: ElementRef;
+  images = [
+    '/secondCCM.png',
+    '/secondCCM.png',
+    '/secondCCM.png',
+    '/secondCCM.png',
+    '/secondCCM.png',
+  ];
+  currentIndex = 0;
 
+  @HostListener('window:scroll', ['$event'])
+  onScroll(): void {
+    if (!this.sliderContainer) return;
+    const scrollPosition = this.sliderContainer.nativeElement.scrollTop;
+    this.currentIndex = Math.round(scrollPosition / window.innerHeight);
+  }
 }

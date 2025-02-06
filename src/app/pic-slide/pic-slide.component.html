@@ -1,3 +1,9 @@
-<div>
-   <img src="" alt="">
+<div #sliderContainer class="slider-container">
+  <div
+    *ngFor="let img of images; let i = index"
+    class="slide"
+    [class.active]="i === currentIndex"
+  >
+    <img [src]="img" alt="Slide {{ i + 1 }}" />
+  </div>
 </div>
