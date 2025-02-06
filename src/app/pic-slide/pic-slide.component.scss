@@ -4,7 +4,7 @@
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scrollbar-width: none;
-  padding: 56px 160px;
+  padding: 0px 160px;
 }
 
 .slide {
@@ -15,14 +15,12 @@
   justify-content: center;
   scroll-snap-align: start;
   transition: opacity 0.5s ease-in-out;
-  margin: 56px 0;
 }
 
 .slide img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  margin: 56px 0;
 }
 
 .slide:not(.active) {

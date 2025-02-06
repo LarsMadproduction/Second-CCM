@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-pic-slide',
@@ -18,9 +18,14 @@ export class PicSlideComponent {
   ];
   currentIndex = 0;
 
-  @HostListener('window:scroll', ['$event'])
+  ngAfterViewInit(): void {
+    this.sliderContainer.nativeElement.addEventListener(
+      'scroll',
+      this.onScroll.bind(this)
+    );
+  }
+
   onScroll(): void {
-    if (!this.sliderContainer) return;
     const scrollPosition = this.sliderContainer.nativeElement.scrollTop;
     this.currentIndex = Math.round(scrollPosition / window.innerHeight);
   }
