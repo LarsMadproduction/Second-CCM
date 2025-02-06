@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-share-btn',
-  imports: [],
+  standalone: true,
   templateUrl: './share-btn.component.html',
-  styleUrl: './share-btn.component.scss'
+  styleUrls: ['./share-btn.component.scss']
 })
 export class ShareBtnComponent {
+  @Input() imageIndex!: number;
 
+  share() {
+    console.log(`Bild ${this.imageIndex} wurde geteilt!`);
+    alert(`Bild ${this.imageIndex} wurde geteilt!`);
+  }
 }

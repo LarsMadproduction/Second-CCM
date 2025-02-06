@@ -1,13 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { ShareBtnComponent } from "../share-btn/share-btn.component";
 
 @Component({
   selector: 'app-pic-slide',
-  imports: [CommonModule],
+  standalone: true,
+  imports: [CommonModule, ShareBtnComponent],
   templateUrl: './pic-slide.component.html',
   styleUrl: './pic-slide.component.scss',
 })
-export class PicSlideComponent {
+export class PicSlideComponent implements AfterViewInit {
   @ViewChild('sliderContainer') sliderContainer!: ElementRef;
   images = [
     '/secondCCM.png',
