@@ -1,11 +1,22 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-nav',
-  imports: [],
+  standalone: true,
   templateUrl: './side-nav.component.html',
-  styleUrl: './side-nav.component.scss'
+  styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent {
+  constructor(private router: Router) {}
 
+  navForYou() {
+    this.router.navigate(['']);
+  }
+  navFavorite() {
+    this.router.navigate(['favorite']);
+  }
+  navMysales() {
+    this.router.navigate(['mysales']);
+  }
 }
