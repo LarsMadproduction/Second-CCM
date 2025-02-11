@@ -5,6 +5,9 @@
     [class.active]="i === currentIndex"
   >
     <img [src]="img" alt="Slide {{ i + 1 }}" />
-    <app-share-btn [imageIndex]="i"></app-share-btn>
+    <div class="btns">
+      <app-share-btn [imageIndex]="i"></app-share-btn>
+      <app-favorite-btn [imageIndex]="i"></app-favorite-btn>
+    </div>
   </div>
 </div>
